@@ -26,4 +26,8 @@ public class CallSomethingRequestStreamHandler extends SpeechletRequestStreamHan
         super(speechlet, supportedApplicationIds);
     }
 
+    public CallSomethingRequestStreamHandler() {
+        super(new CallSomethingSpeechlet(),supportedApplicationIds);
+    }
+
 }

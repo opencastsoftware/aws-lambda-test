@@ -38,7 +38,10 @@ public class CallSomethingSpeechlet implements Speechlet {
 
         Intent intent = intentRequest.getIntent();
         String intentName = (intent != null) ? intent.getName() : null;
-        return null;
+        PlainTextOutputSpeech outputSpeech = new PlainTextOutputSpeech();
+        outputSpeech.setText("Thanks for asking");
+
+        return SpeechletResponse.newTellResponse(outputSpeech);
     }
 
     public void onSessionEnded(SessionEndedRequest sessionEndedRequest, Session session) throws SpeechletException {
